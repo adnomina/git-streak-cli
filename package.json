@@ -5,11 +5,14 @@
   "license": "MIT",
   "author": "Nicolas Herschke",
   "type": "module",
-  "main": "index.js",
+  "main": "streak.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "commander": "^14.0.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
   }
 }
