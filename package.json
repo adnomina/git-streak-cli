@@ -1,0 +1,12 @@
+{
+  "name": "git-streak-cli",
+  "version": "1.0.0",
+  "description": "A CLI tool that notifies you about your current GitHub streak and motivates you to code.",
+  "license": "MIT",
+  "author": "Nicolas Herschke",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
