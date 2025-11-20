@@ -1,6 +1,7 @@
 import { Command } from "commander";
 import { createOAuthDeviceAuth } from "@octokit/auth-oauth-device";
 import { Octokit } from "@octokit/core";
+import * as fs from 'node:fs/promises';
 
 const program = new Command();
 
@@ -32,16 +33,14 @@ async function logInToGitHub() {
         type: "oauth",
     });
 
-    const octokit = new Octokit({
-        auth: token,
-    });
-
-    try {
-        const { data: userInfo } = await octokit.request("GET /user");
-        console.table(userInfo);
-    } catch (error) {
-        console.error("Error fetching user information with Octokit:", error);
-    }
+    fs.open('token.txt', 'w')
+        .then((file) => {
+            file.write(token);
+            file.close();
+        })
+        .catch((error) => {
+            console.error('Error writing to file:', error);
+        });
 }
 
 program
