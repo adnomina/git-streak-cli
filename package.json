@@ -1,23 +1,22 @@
 {
-    "name": "git-streak-cli",
-    "version": "1.0.0",
-    "description": "A CLI tool that notifies you about your current GitHub streak and motivates you to code.",
-    "license": "MIT",
-    "author": "Nicolas Herschke",
-    "type": "module",
-    "main": "streak.js",
-    "scripts": {
-        "build": "npx tsc",
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "dependencies": {
-        "@octokit/auth-oauth-device": "^8.0.3",
-        "@octokit/core": "^7.0.6",
-        "commander": "^14.0.2",
-        "octokit": "^5.0.5"
-    },
-    "devDependencies": {
-        "@types/node": "^24.10.1",
-        "typescript": "^5.9.3"
-    }
+	"name": "git-streak-cli",
+	"version": "1.0.0",
+	"description": "A CLI tool that notifies you about your current GitHub streak and motivates you to code.",
+	"license": "MIT",
+	"author": "Nicolas Herschke",
+	"type": "module",
+	"main": "streak.js",
+	"scripts": {
+		"build": "npx tsc",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"dependencies": {
+		"@octokit/auth-oauth-device": "^8.0.3",
+		"@octokit/graphql": "^9.0.3",
+		"commander": "^14.0.2"
+	},
+	"devDependencies": {
+		"@types/node": "^24.10.1",
+		"typescript": "^5.9.3"
+	}
 }
